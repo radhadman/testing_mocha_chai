@@ -1,8 +1,9 @@
 const assert = require('assert');
+const expect = require('chai').expect;
 
 const { display, add} = require('../src/app.js');
 
-// test # 1: pass
+// test # 1
 describe("the hello function", function(){
     it("should say 'hello'", function(){
         const result = display();
@@ -11,16 +12,7 @@ describe("the hello function", function(){
     });
 
 
-// test # 1: fail
-describe("the hello function", function(){
-    it("should say 'hello'", function(){
-        const result = display();
-        assert.equal(result, 'helllo');
-    });
-    });
-
-
-// test # 2: pass
+// test # 2
 describe("the add function", function(){
     it("should add 2 numbers correctly", function(){
         const result = add(1,5);
@@ -28,11 +20,22 @@ describe("the add function", function(){
     });
     });
 
-// test # 2: fail
+
+// test 1 using Chai's expect assertion
+describe("the display function", function(){
+    it("should say 'hello'", function(){
+        const result = display();
+        expect(result).to.be.eq('hello');
+    });
+    });
+
+// test 2 using Chai's expect assertion
 describe("the add function", function(){
     it("should add 2 numbers correctly", function(){
         const result = add(1,5);
-        assert.equal(result, 7);
+        expect(result).to.be.eq(6);
     });
     });
+
+
 
