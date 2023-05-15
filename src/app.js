@@ -1,4 +1,4 @@
-function display() {
+function hello() {
     return 'hello';
 }
 
@@ -7,6 +7,6 @@ function add(a,b) {
 }
 
 module.exports = {
-    display,
+    hello,
     add,
 };

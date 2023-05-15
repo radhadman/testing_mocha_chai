@@ -1,12 +1,12 @@
 const assert = require('assert');
 const expect = require('chai').expect;
 
-const { display, add} = require('../src/app.js');
+const { hello, add} = require('../src/app.js');
 
 // test # 1
 describe("the hello function", function(){
     it("should say 'hello'", function(){
-        const result = display();
+        const result = hello();
         assert.equal(result, 'hello');
     });
     });
@@ -22,9 +22,9 @@ describe("the add function", function(){
 
 
 // test 1 using Chai's expect assertion
-describe("the display function", function(){
+describe("the hello function", function(){
     it("should say 'hello'", function(){
-        const result = display();
+        const result = hello();
         expect(result).to.be.eq('hello');
     });
     });
